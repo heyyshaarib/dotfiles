@@ -1,1 +1,3 @@
-dotfiles/git/.gitconfig
+[user]
+	email = heyyshaarib@gmail.com
+	name = Asharib Ansari
