@@ -1,8 +1,10 @@
-return { -- Autocompletion
+return {
   {
-    "windwp/nvim-autopairs",
+    'windwp/nvim-autopairs',
     event = "InsertEnter",
-    config = function() require("nvim-autopairs").setup {} end  
+    config = function()
+      require("nvim-autopairs").setup {}
+    end
   },
   { 
     'hrsh7th/nvim-cmp',
@@ -11,7 +13,6 @@ return { -- Autocompletion
       'hrsh7th/cmp-nvim-lsp',
       'L3MON4D3/LuaSnip',
       'saadparwaiz1/cmp_luasnip',
-      'Exafunction/codeium.nvim'
     },
     config = function()
       -- nvim-cmp setup
@@ -38,7 +39,7 @@ return { -- Autocompletion
           ['<Tab>'] = cmp.mapping(function(fallback)
             if cmp.visible() then
               cmp.select_next_item()
-            elseif luasnip.expand_or_jumpable() then
+            elseif luasnip.expand_or_jumpable(nil) then
               luasnip.expand_or_jump()
             else
               fallback()
@@ -57,8 +58,6 @@ return { -- Autocompletion
         sources = {
           { name = 'nvim_lsp' },
           { name = 'luasnip' },
-          { name = "codeium" },
-          -- { name = "neorg" },
         },
       })
     end
