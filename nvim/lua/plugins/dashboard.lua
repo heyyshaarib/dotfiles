@@ -37,6 +37,7 @@ return {
           },
           footer = function()
             local stats = require("lazy").stats()
+            -- Round startuptime to two decimal places for display
             local ms = (math.floor(stats.startuptime * 100 + 0.5) / 100)
             return { "⚡ Neovim loaded " .. stats.loaded .. "/" .. stats.count .. " plugins in " .. ms .. "ms" }
           end,
