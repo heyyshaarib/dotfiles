@@ -45,7 +45,9 @@ return {
           local argv = { ... }
           timer:start(ms, 0, function()
             timer:stop()
-            vim.schedule_wrap(fn)(table.unpack(argv))
+            vim.schedule(function()
+              fn(unpack(argv))
+            end)
           end)
         end
       end
