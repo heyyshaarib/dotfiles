@@ -13,7 +13,7 @@ return {
     cmd = { "TSUpdateSync", "TSUpdate", "TSInstall" },
     keys = {
       { "<c-space>", desc = "Increment Selection" },
-      { "<bs>", desc = "Decrement Selection", mode = "x" },
+      { "<bs>",      desc = "Decrement Selection", mode = "x" },
     },
     dependencies = {
       'nvim-treesitter/nvim-treesitter-textobjects',
@@ -24,8 +24,9 @@ return {
       indent = { enable = true },
       ensure_installed = {
         "bash", "c", "diff", "html", "javascript", "jsdoc", "json", "jsonc", "lua",
-        "luadoc", "luap", "markdown", "markdown_inline", "printf", "python", "query",
+        "luadoc", "luap", "markdown", "markdown_inline", "python", "query",
         "java", "regex", "toml", "tsx", "typescript", "vim", "vimdoc", "xml", "yaml",
+        "gitignore", "dockerfile", "make", "cmake", "ini", "scss", "css",
       },
       incremental_selection = {
         enable = true,
@@ -92,5 +93,11 @@ return {
     config = function(_, opts)
       require("nvim-treesitter.configs").setup(opts)
     end,
-  }
+  },
+  {
+    "HiPhish/rainbow-delimiters.nvim"
+  },
+  {
+    "JoosepAlviste/nvim-ts-context-commentstring"
+  },
 }
