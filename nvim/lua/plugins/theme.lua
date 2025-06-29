@@ -1,12 +1,12 @@
 return {
   {
-    "rebelot/kanagawa.nvim",
+    "Mofiqul/vscode.nvim",
     priority = 1000,
   },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "kanagawa",
+      colorscheme = "vscode",
     },
   },
   {
